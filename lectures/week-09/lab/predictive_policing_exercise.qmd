@@ -135,13 +135,13 @@ burglaries <- st_read(here("data", "burglaries.shp")) %>%
 cat("\n✓ Loaded burglary data\n")
 cat("  - Number of burglaries:", nrow(burglaries), "\n")
 cat("  - CRS:", st_crs(burglaries)$input, "\n")
-cat("  - Date range:", min(burglaries$date, na.rm = TRUE), "to", 
-    max(burglaries$date, na.rm = TRUE), "\n")
+cat("  - Date range:", min(burglaries$Date, na.rm = TRUE), "to", 
+    max(burglaries$Date, na.rm = TRUE), "\n")
 ```
 
 **Question 1.1:** How many burglaries are in the dataset? What time period does this cover? Why does the coordinate reference system matter for our spatial analysis?
 
-*Your answer here:*
+*Your answer here: There are 7482 burglaries in the dataset. The data range is from 2017-1-1 to 2018-1-1*
 
 ::: callout-warning
 ## Critical Pause #1: Data Provenance
@@ -940,4 +940,5 @@ You've successfully built a spatial predictive model for burglaries using:
 ✓ Spatial cross-validation (LOGO)\
 ✓ Comparison to baseline (KDE)
 :::
+
 ::::::::::
